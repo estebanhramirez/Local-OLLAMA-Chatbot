@@ -59,7 +59,9 @@ We can deactivate the virtual environment using `deactivate.bat`.
 pip install -r "~/<prefix_path>/<project_name>/Repo/requirements.txt"
 ```
 
-## 4. Install Ollama
+## 4. Set-up Ollama API
+
+### 4.1. Install Ollama
 Install Ollama in your local laptop<br>
 <br>
 **Command `[Command Prompt]`:**
@@ -67,7 +69,7 @@ Install Ollama in your local laptop<br>
 irm https://ollama.com/install.ps1 | iex
 ```
 
-## 4. Pull Ollama models
+### 4.2. Pull Ollama models
 **Command `[Command Prompt]`:**
 ```
 ollama pull llama2
@@ -77,7 +79,7 @@ ollama pull llama2
 ollama list
 ```
 
-## 5. Run Ollama on a specific port in your computer
+### 4.3. Run Ollama on a specific port in your computer
 **Command `[Command Prompt]`:**
 ```
 ollama serve
