@@ -1,39 +1,75 @@
 # Local-OLLAMA-Chatbot
 Local code for a OLLAMA Chatbot
 
-## 1. Install Ollama
+## 1. Create the project directory
+
+### 1.1. Create the root folder
+Create a folder named `<project_name>`, at some path `<prefix_path>` <br>
+<br>
+**Command `[Command Prompt]`:**
+```
+mkdir "~/<prefix_path>/<project_name>"
+```
+**Result `[File directory]`:**
+```
+<prefix_path>/
+        └── <project_name>/
+```
+
+### 1.2. Clone the GitHub repository
+Clone this repository inside the root folder <br>
+<br>
+**Command `[Command Prompt]`:**
+```
+git clone "https://github.com/estebanhramirez/SMART-Reflexion-Agent-for-code-refactoring.git" "~/<prefix_path>/<project_name>/Repo"
+```
+**Result `[File directory]`:**
+```
+<prefix_path>/
+        └── <project_name>/
+                    └── Repo/
+                          ├── README.md
+                          └── ...
+```
+
+## 2. Set-up the virtual environment
+
+### 2.1. Create the virtual environment
+Create a new folder name `venv` inside the root folder, `<project_name>`, with the isolated and self-contained virtual environment <br>
+<br>
+**Command `[Command Prompt]`:**
+```
+python3.12 -m venv "~/<prefix_path>/<project_name>/venv"
+```
+
+### 2.2. Activate the virtual environment
+**Command `[Command Prompt]`:**
+```
+source "~/<prefix_path>/<project_name>/venv/bin/activate"
+```
+or (in Windows)
+```
+~\<prefix_path>\<project_name>\venv\Scripts\activate.bat
+```
+We can deactivate the virtual environment using `deactivate.bat`.
+
+## 3. Install the required libraries
+**Command `[Command Prompt]`:**
+```
+pip install -r "~/<prefix_path>/<project_name>/Repo/requirements.txt"
+```
+
+## 4. Install Ollama
 Install Ollama in your local laptop<br>
 <br>
-**Command:**
+**Command `[Command Prompt]`:**
 ```
 irm https://ollama.com/install.ps1 | iex
 ```
-**Result:**
-```
->>> Downloading Ollama for Windows...
-######################################## 100.0%
->>> Installing Ollama...
->>> Install complete. Run 'ollama' from the command line.
-```
 
 ## 1. Run Ollama on a specific port in your computer
-**Command:**
+**Command `[Command Prompt]`:**
 ```
 ollama serve
-```
-**Result:**
-```
-time=2026-08-07T19:00:22.717+02:00 level=INFO source=routes.go:1933 msg="server config" env="map[CUDA_VISIBLE_DEVICES: GGML_VK_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: LLAMA_ARG_FIT: LLAMA_ARG_FIT_TARGET: NO_PROXY: OLLAMA_CONTEXT_LENGTH:0 OLLAMA_DEBUG:INFO OLLAMA_DEBUG_LOG_REQUESTS:false OLLAMA_EDITOR: OLLAMA_FLASH_ATTENTION:false OLLAMA_GO_TEMPLATE:true OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_IGPU_ENABLE: OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MAX_TRANSFER_STREAMS:4 OLLAMA_MODELS:C:\\Users\\herna\\.ollama\\models OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NO_CLOUD:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_REMOTES:[ollama.com] OLLAMA_SCHED_SPREAD:false OLLAMA_VULKAN:true ROCR_VISIBLE_DEVICES:]"
-time=2026-08-07T19:00:22.718+02:00 level=INFO source=routes.go:1935 msg="Ollama cloud disabled: false"
-time=2026-08-07T19:00:22.720+02:00 level=INFO source=images.go:883 msg="total blobs: 0"
-time=2026-08-07T19:00:22.720+02:00 level=INFO source=images.go:890 msg="total unused blobs removed: 0"
-time=2026-08-07T19:00:22.721+02:00 level=INFO source=routes.go:1990 msg="Listening on 127.0.0.1:11434 (version 0.32.6)"
-time=2026-08-07T19:00:22.722+02:00 level=INFO source=model_list_cache.go:112 msg="model list cache hydration complete" models=0 failures=0 elapsed=1.1287ms
-time=2026-08-07T19:00:22.724+02:00 level=INFO source=runner.go:60 msg="discovering available GPUs..."
-time=2026-08-07T19:00:22.734+02:00 level=WARN source=amd.go:485 msg="AMD driver is too old. Update your AMD driver to enable GPU inference."
-time=2026-08-07T19:00:23.409+02:00 level=INFO source=model_recommendations.go:177 msg="model recommendations cache sleep scheduled" wait=4h1m8.88298206s consecutive_failures=0
-time=2026-08-07T19:00:24.865+02:00 level=INFO source=runner.go:405 msg="dropping integrated GPU; to enable, set OLLAMA_IGPU_ENABLE=1" id=0 library=Vulkan compute=0.0 name=Vulkan0 description="AMD Radeon(TM) Graphics" pci_id=""
-time=2026-08-07T19:00:24.865+02:00 level=INFO source=types.go:50 msg="inference compute" id=cpu library=cpu compute="" name=cpu description=cpu libdirs=ollama driver="" pci_id="" type="" total="30.8 GiB" available="17.8 GiB"
-time=2026-08-07T19:00:24.865+02:00 level=INFO source=routes.go:2040 msg="vram-based default context" total_vram="0 B" default_num_ctx=4096
 ```
 
