@@ -67,7 +67,17 @@ Install Ollama in your local laptop<br>
 irm https://ollama.com/install.ps1 | iex
 ```
 
-## 1. Run Ollama on a specific port in your computer
+## 4. Pull Ollama models
+**Command `[Command Prompt]`:**
+```
+ollama pull llama2
+```
+
+```
+ollama list
+```
+
+## 5. Run Ollama on a specific port in your computer
 **Command `[Command Prompt]`:**
 ```
 ollama serve
