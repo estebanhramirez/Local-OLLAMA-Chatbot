@@ -39,17 +39,17 @@ Create a new folder name `venv` inside the root folder, `<project_name>`, with t
 <br>
 **Command `[Command Prompt]`:**
 ```
-python3.12 -m venv "~/<prefix_path>/<project_name>/venv"
+python3.12 -m venv "~/<prefix_path>/<project_name>/Repo/venv"
 ```
 
 ### 2.2. Activate the virtual environment
 **Command `[Command Prompt]`:**
 ```
-source "~/<prefix_path>/<project_name>/venv/bin/activate"
+source "~/<prefix_path>/<project_name>/Repo/venv/bin/activate"
 ```
 or (in Windows)
 ```
-~\<prefix_path>\<project_name>\venv\Scripts\activate.bat
+~\<prefix_path>\<project_name>\Repo\venv\Scripts\activate.bat
 ```
 We can deactivate the virtual environment using `deactivate.bat`.
 
