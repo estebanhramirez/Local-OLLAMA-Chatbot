@@ -85,3 +85,13 @@ ollama list
 ollama serve
 ```
 
+# 5. Set-up the LocalTunnel
+## 5.1. Install Node.js®
+Install Node.js®'s prebuilt in `https://nodejs.org/en/download`.
+
+## 5.2. Install LocalTunnel
+**Command `[Command Prompt]`:**
+```
+npm install -g localtunnel
+```
+
