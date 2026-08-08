@@ -85,7 +85,7 @@ ollama list
 ollama serve
 ```
 
-# 5. Set-up the LocalTunnel
+## 5. Set-up the LocalTunnel
 ## 5.1. Install Node.js®
 Install Node.js®'s prebuilt in `https://nodejs.org/en/download`.
 
@@ -94,4 +94,24 @@ Install Node.js®'s prebuilt in `https://nodejs.org/en/download`.
 ```
 npm install -g localtunnel
 ```
+
+## 5.3. Run the Python server in one terminal window
+Run the FastAPI app to handle prompts and communicate with the local LLM
+**Command `[Command Prompt]`:**
+```
+python app.py
+```
+
+## 5.4. Launch LocalTunnel
+Open a second terminal window and direct LocalTunnel to point to your FastAPI port (8080)
+**Command `[Command Prompt]`:**
+```
+lt --port 8080
+```
+LocalTunnel will output a public HTTPS URL.
+
+
+
+
+
 
