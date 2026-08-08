@@ -71,6 +71,8 @@ irm https://ollama.com/install.ps1 | iex
 
 ### 4.2. Pull Ollama models
 **Command `[Command Prompt]`:**
+Download the model llama2<br>
+<br>
 ```
 ollama pull llama2
 ```
@@ -96,14 +98,16 @@ npm install -g localtunnel
 ```
 
 ### 5.3. Run the Python server in one terminal window
-Run the FastAPI app to handle prompts and communicate with the local LLM
+Run the FastAPI app to handle prompts and communicate with the local LLM<br>
+<br>
 **Command `[Command Prompt]`:**
 ```
 python app.py
 ```
 
 ### 5.4. Launch LocalTunnel
-Open a second terminal window and direct LocalTunnel to point to your FastAPI port (8080)
+Open a second terminal window and direct LocalTunnel to point to your FastAPI port (8080)<br>
+<br>
 **Command `[Command Prompt]`:**
 ```
 lt --port 8080
