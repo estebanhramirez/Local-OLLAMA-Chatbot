@@ -120,8 +120,12 @@ lt --port 8080
 LocalTunnel will output a public HTTPS URL.
 
 ## 6. Test the end-to-end pipeline
+(Before creating the LocalTunnel: test the localhost)
 ```
-curl -X POST http://127.0.0.1:8080/generate -H "Authorization: Bearer DeportesTolima2017*#2220" -H "Content-Type: application/json" -d "{\"prompt\": \"Where are you from?\"}"
+curl -X POST http://127.0.0.1:8080/generate -H "Authorization: Bearer DeportesTolima2017*#2220" -H "Content-Type: application/json" -d "{\"prompt\": \""What are you?\"}"
 ```
-
+(After creating the LocalTunnel: test the public online link)
+```
+curl -X POST https://olive-donuts-add.loca.lt/generate -H "Authorization: Bearer DeportesTolima2017*#2220" -H "Content-Type: application/json" -H "bypass-tunnel-reminder: true" -d "{\"prompt\": \"What are you?\"}"
+```
 
