@@ -5,7 +5,7 @@ import uvicorn
 
 
 # Set a custom secret API key so unauthorized people cannot use your laptop's GPU
-API_KEY = "DeportesTolima2017*#2220"
+API_KEY = #Secret_key
 
 
 class PromptRequest(BaseModel):
